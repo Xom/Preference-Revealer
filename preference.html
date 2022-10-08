@@ -1,11 +1,12 @@
 <html>
 <head>
-<title>Preference Revealer v1.1</title>
+<title>Preference Revealer v1.3</title>
 <script src="lzw.js"></script>
 <script src="base64.js"></script>
 <script type="text/javascript">
 
     //  see Knuth vol.3 SORTING AND SEARCHING for description of Ford-Johnson algorithm (AKA merge insertion)
+    //  2018 update: Wikipedia now has a page on merge insertion: https://en.wikipedia.org/wiki/Merge-insertion_sort
 
     //  negatives for distinguishing from item indices
     //  first step is PairSORT, which invokes KEYALIGN, which invokes MERGE
@@ -360,13 +361,13 @@
         }
         else
         {
-            myList.value = "<img src=\"http://i.imgur.com/Go5Ng.png\"></img><br>Sigmund\n<img src=\"http://i.imgur.com/i1n7G.png\"></img><br>Terence\n<img src=\"http://i.imgur.com/GyN4c.png\"></img><br>Ijyb\n<img src=\"http://i.imgur.com/dW7VZ.png\"></img><br>Jessica\n<img src=\"http://i.imgur.com/KZ91c.png\"></img><br>Grinder\n<img src=\"http://i.imgur.com/pk4u1.png\"></img><br>Crazy Yiuf\n<img src=\"http://i.imgur.com/jWfwc.png\"></img><br>Prince Ribbit\n<img src=\"http://i.imgur.com/0KXJT.png\"></img><br>Blork the ork\n<img src=\"http://i.imgur.com/wSCs8.png\"></img><br>Duvessa";
+            myList.value = "<img src=\"https://i.imgur.com/Go5Ng.png\"></img><br>Sigmund\n<img src=\"https://i.imgur.com/i1n7G.png\"></img><br>Terence\n<img src=\"https://i.imgur.com/GyN4c.png\"></img><br>Ijyb\n<img src=\"https://i.imgur.com/dW7VZ.png\"></img><br>Jessica\n<img src=\"https://i.imgur.com/KZ91c.png\"></img><br>Grinder\n<img src=\"https://i.imgur.com/pk4u1.png\"></img><br>Crazy Yiuf\n<img src=\"https://i.imgur.com/jWfwc.png\"></img><br>Prince Ribbit\n<img src=\"https://i.imgur.com/0KXJT.png\"></img><br>Blork the ork\n<img src=\"https://i.imgur.com/wSCs8.png\"></img><br>Duvessa";
         }
     }
 
     function showAbout()
     {
-        showHTML("<p>Preference Revealer sorts a list of items by asking you to make pairwise comparisons.<br>(This level of decomposition isn't always appropriate, but sometimes it's invaluable.)</p><p>Click [<u>example</u>] twice to see an additional example.<br>After inputting a list, click the \"Generate custom link for sharing...\" button for a link to a version of the page already filled out with your list.  The results page has a similar button for sharing your results.</p><p>Inspired by <a href=\"http://mainyan.sakura.ne.jp/thsort.html\">T&#333;h&#333;</a> <a href=\"http://freewebs.com/tohosort\">Sort</a>.<br>Hat tip to pluffei for suggesting a general-purpose version.<br>Many thanks to Knuth for his in-depth discussion of minimal-comparison sorting.</p><p>Unlike T&#333;h&#333 Sort, which uses merge sort, Preference Revealer uses the Ford-Johnson algorithm, a.k.a. merge insertion, as described in Knuth's <i>The Art of Computer Programming, vol. 3: Sorting and Searching</i>.  <a href=\"http://xomnom.com/fja.html\">Read more here.</a></p><p>Refresh the page to reset Preference Revealer.</p><p><a href=\"https://github.com/Xomnom/Preference-Revealer\">Preference Revealer is on GitHub.</a></p><h6><a rel=\"license\" href=\"http://creativecommons.org/licenses/by/3.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"http://i.creativecommons.org/l/by/3.0/80x15.png\" /></a> <span xmlns:dct=\"http://purl.org/dc/terms/\" href=\"http://purl.org/dc/dcmitype/InteractiveResource\" property=\"dct:title\" rel=\"dct:type\">Preference Revealer</span> by <a xmlns:cc=\"http://creativecommons.org/ns#\" href=\"http://xomnom.com\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">Xomnom</a> is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution 3.0 Unported License</a>.</h6>");
+        showHTML("<p>Preference Revealer sorts a list of items by asking you to make pairwise comparisons.</p><p>Before you resort to this, consider how much time you'd save by using the ordinary human method of eyeballing your items together into a rough order and then refining with ad hoc adjustments.</p><p>Click [<u>example</u>] twice to see an additional example.<br>After inputting a list, click the \"Generate custom link for sharing...\" button for a link to a version of the page already filled out with your list.  The results page has a similar button for sharing your results.</p><p>Inspired by <a href=\"https://mainyan.sakura.ne.jp/thsort.html\">T&#333;h&#333;</a> <a href=\"https://freewebs.com/tohosort\">Sort</a>.<br>Hat tip to pluffei for suggesting a general-purpose version.</p><p>Many thanks to Knuth for his in-depth discussion of minimal-comparison sorting in <i>The Art of Computer Programming, vol. 3: Sorting and Searching</i>. When Preference Revealer was made, Wikipedia yet had no page on <a href=\"https://en.wikipedia.org/wiki/Merge-insertion_sort\">merge-insertion sort</a>, which Preference Revealer uses instead of merge sort (used by T&#333;h&#333 Sort). Merge-insertion sort makes one or two percent fewer comparisons in the average case than merge sort, according to my rather hasty calculations.</p><p>Refresh the page to reset Preference Revealer.</p><p><a href=\"https://github.com/Xom/Preference-Revealer\">Preference Revealer is on GitHub.</a></p><h6><a rel=\"license\" href=\"https://creativecommons.org/licenses/by/3.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by/3.0/80x15.png\" /></a> <span xmlns:dct=\"https://purl.org/dc/terms/\" href=\"https://purl.org/dc/dcmitype/InteractiveResource\" property=\"dct:title\" rel=\"dct:type\">Preference Revealer</span> by <a xmlns:cc=\"https://creativecommons.org/ns#\" href=\"https://www.xom.io/\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">Xom</a> is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution 3.0 Unported License</a>.</h6>");
     }
 
     function showHTML(foo)
@@ -394,7 +395,8 @@
 <body onload="loadQuery()">
 <h1><font color="#dc1a48">Preference Revealer</font></h1>
 <div id="text">
-<p>Preference Revealer sorts a list of items by asking you to make pairwise comparisons.
+<p>Preference Revealer sorts a list of items by asking you to make pairwise comparisons.</p>
+<p>Before you resort to this, consider how much time you'd save by using the ordinary human method of eyeballing your items together into a rough order and then refining with ad hoc adjustments.</p>
 <p>Enter your items in the field below, each on a separate line.  [<a href="javascript:showExample()">example</a>]  [<a href="javascript:showAbout()">about</a>]</p>
 <p><textarea cols="70" rows="10" id="list"></textarea></p>
 <p><button type="button" onclick="submitList()" style="width:192"><font size="5">Go!</font></button></p>
