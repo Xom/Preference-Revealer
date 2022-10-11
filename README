@@ -1,4 +1,4 @@
-Preference Revealer v1.3
+Preference Revealer v1.4
 
 https://github.com/Xom/Preference-Revealer
 
@@ -14,6 +14,7 @@ v1.1, 2012-9-27:    When results are reached, update location bar using
                       TODO: warn user when this fails.
 v1.2, 2013-10-22:   Sanitize input HTML more strictly.
 v1.3, 2022-10-8:    Update README and [_about_] text.
+v1.4  2022-10-11:   Fix generating relative URL when in subdirectory of domain.
 
 Preference Revealer sorts a list of items by asking you to make pairwise comparisons.
 
